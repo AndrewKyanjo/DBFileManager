@@ -434,3 +434,22 @@ VALUES
     (30, '2024-01-20', 773.50, 785.25, 771.75, 782.80, 10500000, 782.80, 1.37),
     (30, '2024-01-21', 784.00, 796.50, 782.25, 793.25, 11000000, 793.25, 1.34);
 GO
+
+
+
+-- Insert currency exchange rates (as of Jan 2024)
+INSERT INTO Currencies (CurrencyCode, CurrencyName, ExchangeRateToUSD, LastUpdated, Country, VolatilityIndex)
+VALUES
+    ('USD', 'US Dollar', 1.000000, '2024-01-21', 'United States', 0.012),
+    ('EUR', 'Euro', 1.085000, '2024-01-21', 'European Union', 0.015),
+    ('JPY', 'Japanese Yen', 0.006850, '2024-01-21', 'Japan', 0.018),
+    ('HKD', 'Hong Kong Dollar', 0.127900, '2024-01-21', 'Hong Kong', 0.014),
+    ('INR', 'Indian Rupee', 0.012050, '2024-01-21', 'India', 0.016),
+    ('CAD', 'Canadian Dollar', 0.742000, '2024-01-21', 'Canada', 0.013),
+    ('DKK', 'Danish Krone', 0.145000, '2024-01-21', 'Denmark', 0.017),
+    ('TWD', 'Taiwan Dollar', 0.031500, '2024-01-21', 'Taiwan', 0.020),
+    ('GBP', 'British Pound', 1.265000, '2024-01-21', 'United Kingdom', 0.014),
+    ('AUD', 'Australian Dollar', 0.658000, '2024-01-21', 'Australia', 0.016),
+    ('CHF', 'Swiss Franc', 1.157000, '2024-01-21', 'Switzerland', 0.011),
+    ('CNY', 'Chinese Yuan', 0.140500, '2024-01-21', 'China', 0.019);
+GO
