@@ -44,6 +44,18 @@ CREATE TABLE StockPrices (
 );
 GO
 
+    -- Table 3: Currencies (for exchange rate calculations)
+CREATE TABLE Currencies (
+    CurrencyCode VARCHAR(3) PRIMARY KEY,
+    CurrencyName VARCHAR(50) NOT NULL,
+    ExchangeRateToUSD DECIMAL(10,6) NOT NULL,
+    LastUpdated DATE NOT NULL,
+    Country VARCHAR(50),
+    VolatilityIndex DECIMAL(5,3) DEFAULT 0.0
+);
+GO
+
+    
 -- Create indexes for performance
 CREATE INDEX IX_StockPrices_Date ON StockPrices(Date);
 CREATE INDEX IX_StockPrices_CompanyID ON StockPrices(CompanyID);
